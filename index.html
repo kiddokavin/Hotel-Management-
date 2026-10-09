@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bella Vista - Fine Dining & Gourmet Restaurant</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ==================== NAVIGATION BAR ==================== -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#hero" class="logo">
+                <span class="logo-icon">🍷</span>Bella <span>Vista</span>
+            </a>
+            
+            <nav class="nav-links" id="navLinks">
+                <a href="#hero">Home</a>
+                <a href="#about">About Us</a>
+                <a href="#specials">Specials</a>
+                <a href="#menu">Menu</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#reservation">Reservation</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <a href="#reservation" class="btn btn-gold nav-cta">Book a Table</a>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">☰</button>
+        </div>
+    </header>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section id="hero" class="hero-section">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <span class="hero-badge">✨ ARTISAN CULINARY EXPERIENCE</span>
+                <h1 class="hero-title">Experience the Art of <span class="gold-text">Fine Dining</span></h1>
+                <p class="hero-subtitle">Indulge in handcrafted gourmet cuisine, organic farm-to-table ingredients, and an unforgettable romantic atmosphere at Bella Vista.</p>
+                <div class="hero-btns">
+                    <a href="#reservation" class="btn btn-gold">Reserve Your Table 🍷</a>
+                    <a href="#menu" class="btn btn-outline">Explore Menu</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== ABOUT SECTION ==================== -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">OUR STORY</span>
+                <h2 class="section-title">Passion for Flavor & Elegance</h2>
+                <p class="section-description">For over 15 years, Bella Vista has blended authentic Mediterranean traditions with modern culinary innovation.</p>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-card">
+                    <span class="card-icon">🌿</span>
+                    <h3>100% Organic Ingredients</h3>
+                    <p>Sourced daily from local organic farms to deliver fresh, vibrant, and wholesome flavors in every dish.</p>
+                </div>
+
+                <div class="about-card">
+                    <span class="card-icon">👨‍🍳</span>
+                    <h3>Award-Winning Chefs</h3>
+                    <p>Led by Master Chef Marco Rossi, our culinary team brings international expertise and artistic plating.</p>
+                </div>
+
+                <div class="about-card">
+                    <span class="card-icon">🥂</span>
+                    <h3>Exclusive Wine Cellar</h3>
+                    <p>Pair your meal with vintage wines curated from renowned vineyards across Italy, France, and California.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SPECIAL DISHES SECTION ==================== -->
+    <section id="specials" class="specials-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">CHEF'S SELECTION</span>
+                <h2 class="section-title">Signature Special Dishes</h2>
+                <p class="section-description">Handpicked culinary creations prepared with rare spices and premium ingredients.</p>
+            </div>
+
+            <div class="specials-grid">
+                <!-- Special 1 -->
+                <div class="special-card">
+                    <div class="dish-badge">CHEF'S CHOICE</div>
+                    <div class="dish-header">
+                        <h3>Truffle Infused Tagliatelle</h3>
+                        <span class="dish-price">$38.00</span>
+                    </div>
+                    <p class="dish-desc">Handmade egg tagliatelle tossed in black winter truffle cream, shaved Parmigiano-Reggiano, and aged extra virgin olive oil.</p>
+                </div>
+
+                <!-- Special 2 -->
+                <div class="special-card">
+                    <div class="dish-badge">POPULAR</div>
+                    <div class="dish-header">
+                        <h3>Grilled Prime Ribeye Steak</h3>
+                        <span class="dish-price">$46.00</span>
+                    </div>
+                    <p class="dish-desc">USDA Prime dry-aged 12oz ribeye served with roasted garlic rosemary butter, truffle fries, and smoked demi-glace.</p>
+                </div>
+
+                <!-- Special 3 -->
+                <div class="special-card">
+                    <div class="dish-badge">SEAFOOD SPECIAL</div>
+                    <div class="dish-header">
+                        <h3>Saffron Seafood Risotto</h3>
+                        <span class="dish-price">$42.00</span>
+                    </div>
+                    <p class="dish-desc">Creamy Carnaroli rice infused with Spanish saffron, jumbo wild shrimp, sea scallops, and fresh herbs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOD MENU SECTION ==================== -->
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">OUR MENU</span>
+                <h2 class="section-title">Explore Our Gourmet Categories</h2>
+                <p class="section-description">Select a category below to filter our freshly prepared menu items.</p>
+            </div>
+
+            <!-- Menu Category Filter Tabs -->
+            <div class="menu-tabs">
+                <button class="menu-tab-btn active" data-category="all">All Dishes</button>
+                <button class="menu-tab-btn" data-category="starters">Starters 🥗</button>
+                <button class="menu-tab-btn" data-category="mains">Main Course 🥩</button>
+                <button class="menu-tab-btn" data-category="desserts">Desserts 🍰</button>
+                <button class="menu-tab-btn" data-category="beverages">Beverages 🍷</button>
+            </div>
+
+            <!-- Menu Cards Grid -->
+            <div class="menu-grid" id="menuGrid">
+                <!-- Starters -->
+                <div class="menu-card" data-category="starters">
+                    <div class="menu-card-top">
+                        <h4>Bruschetta al Pomodoro</h4>
+                        <span class="price">$14.00</span>
+                    </div>
+                    <p>Toasted sourdough topped with vine-ripened tomatoes, fresh basil, garlic, and balsamic glaze.</p>
+                    <span class="category-tag">Starters</span>
+                </div>
+
+                <div class="menu-card" data-category="starters">
+                    <div class="menu-card-top">
+                        <h4>Crispy Calamari Fritti</h4>
+                        <span class="price">$18.00</span>
+                    </div>
+                    <p>Tender wild calamari lightly fried, served with house-made spicy marinara and lemon aioli.</p>
+                    <span class="category-tag">Starters</span>
+                </div>
+
+                <!-- Main Course -->
+                <div class="menu-card" data-category="mains">
+                    <div class="menu-card-top">
+                        <h4>Pan-Seared Chilean Sea Bass</h4>
+                        <span class="price">$39.00</span>
+                    </div>
+                    <p>Wild Chilean sea bass served over wilted baby spinach, lemon-caper butter, and roasted fingerling potatoes.</p>
+                    <span class="category-tag">Main Course</span>
+                </div>
+
+                <div class="menu-card" data-category="mains">
+                    <div class="menu-card-top">
+                        <h4>Classic Chicken Parmigiana</h4>
+                        <span class="price">$28.00</span>
+                    </div>
+                    <p>Breaded chicken cutlet smothered in San Marzano tomato sauce, fresh mozzarella, served with linguine.</p>
+                    <span class="category-tag">Main Course</span>
+                </div>
+
+                <!-- Desserts -->
+                <div class="menu-card" data-category="desserts">
+                    <div class="menu-card-top">
+                        <h4>Authentic Italian Tiramisu</h4>
+                        <span class="price">$12.00</span>
+                    </div>
+                    <p>Traditional espresso-soaked ladyfingers layered with rich mascarpone cream and dusted with Valrhona cocoa.</p>
+                    <span class="category-tag">Desserts</span>
+                </div>
+
+                <div class="menu-card" data-category="desserts">
+                    <div class="menu-card-top">
+                        <h4>Warm Chocolate Lava Cake</h4>
+                        <span class="price">$14.00</span>
+                    </div>
+                    <p>Decadent molten dark chocolate cake served with Madagascar vanilla bean gelato and fresh berries.</p>
+                    <span class="category-tag">Desserts</span>
+                </div>
+
+                <!-- Beverages -->
+                <div class="menu-card" data-category="beverages">
+                    <div class="menu-card-top">
+                        <h4>Chianti Classico Riserva 2018</h4>
+                        <span class="price">$16.00 / glass</span>
+                    </div>
+                    <p>Full-bodied Tuscan red wine with notes of ripe cherries, tobacco, and subtle oak finish.</p>
+                    <span class="category-tag">Beverages</span>
+                </div>
+
+                <div class="menu-card" data-category="beverages">
+                    <div class="menu-card-top">
+                        <h4>Artisanal Italian Sparkling Soda</h4>
+                        <span class="price">$7.00</span>
+                    </div>
+                    <p>Refreshing sparkling mineral water infused with natural blood orange or Meyer lemon nectar.</p>
+                    <span class="category-tag">Beverages</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== IMAGE GALLERY SECTION ==================== -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">AMBIANCE & CREATIONS</span>
+                <h2 class="section-title">Dining Visual Gallery</h2>
+                <p class="section-description">A glimpse into our elegant dining hall, open kitchen, and signature dishes.</p>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-card bg-1">
+                    <span>🍷 Main Dining Room</span>
+                </div>
+                <div class="gallery-card bg-2">
+                    <span>🥩 Chef's Grill Station</span>
+                </div>
+                <div class="gallery-card bg-3">
+                    <span>🍰 Artisanal Dessert Bar</span>
+                </div>
+                <div class="gallery-card bg-4">
+                    <span>🥂 Private Wine Cellar</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CUSTOMER REVIEWS SECTION ==================== -->
+    <section id="reviews" class="reviews-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">TESTIMONIALS</span>
+                <h2 class="section-title">What Our Guests Say</h2>
+                <p class="section-description">Read authentic dining reviews from our valued patrons.</p>
+            </div>
+
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">"The Truffle Tagliatelle was sublime! Impeccable service, warm lighting, and the wine recommendation was spot on."</p>
+                    <div class="reviewer-info">
+                        <h4>Sophia Martinez</h4>
+                        <span>Food Critic & Guest</span>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">"We celebrated our anniversary at Bella Vista. The staff made us feel so special. Hands down the best steaks in the city!"</p>
+                    <div class="reviewer-info">
+                        <h4>David & Emma Wright</h4>
+                        <span>Regular Patrons</span>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">"Outstanding atmosphere and incredible attention to culinary detail. The molten lava cake is an absolute must-try."</p>
+                    <div class="reviewer-info">
+                        <h4>Marcus Vance</h4>
+                        <span>Gourmet Enthusiast</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== TABLE RESERVATION FORM ==================== -->
+    <section id="reservation" class="reservation-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">ONLINE BOOKING</span>
+                <h2 class="section-title">Reserve Your Table</h2>
+                <p class="section-description">Book your dining experience in advance. Instant client-side booking preview.</p>
+            </div>
+
+            <div class="reservation-box">
+                <form id="reservationForm" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="resName">Full Name *</label>
+                            <input type="text" id="resName" placeholder="Enter full name" required>
+                            <small class="error-msg" id="resNameError">Full name is required.</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="resEmail">Email Address *</label>
+                            <input type="email" id="resEmail" placeholder="example@domain.com" required>
+                            <small class="error-msg" id="resEmailError">Valid email address required.</small>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="resPhone">Phone Number *</label>
+                            <input type="tel" id="resPhone" placeholder="10-digit phone number" required>
+                            <small class="error-msg" id="resPhoneError">Valid 10-digit phone number required.</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="resGuests">Number of Guests *</label>
+                            <select id="resGuests" required>
+                                <option value="">-- Select Guests --</option>
+                                <option value="1 Guest">1 Guest</option>
+                                <option value="2 Guests">2 Guests (Couple)</option>
+                                <option value="4 Guests">4 Guests (Family)</option>
+                                <option value="6+ Guests">6+ Guests (Party)</option>
+                            </select>
+                            <small class="error-msg" id="resGuestsError">Please select number of guests.</small>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="resDate">Reservation Date *</label>
+                            <input type="date" id="resDate" required>
+                            <small class="error-msg" id="resDateError">Please select a valid date.</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="resTime">Preferred Time Slot *</label>
+                            <select id="resTime" required>
+                                <option value="">-- Select Time Slot --</option>
+                                <option value="12:30 PM (Lunch)">12:30 PM (Lunch)</option>
+                                <option value="02:00 PM (Lunch)">02:00 PM (Lunch)</option>
+                                <option value="07:00 PM (Dinner)">07:00 PM (Dinner)</option>
+                                <option value="08:30 PM (Dinner)">08:30 PM (Dinner)</option>
+                                <option value="09:45 PM (Late Dinner)">09:45 PM (Late Dinner)</option>
+                            </select>
+                            <small class="error-msg" id="resTimeError">Please select a time slot.</small>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-gold btn-full">Confirm Reservation Request 🍷</button>
+                </form>
+
+                <!-- Confirmation Alert Message -->
+                <div class="confirmation-alert" id="confirmationAlert">
+                    <h4>🎉 Table Reservation Request Generated!</h4>
+                    <p id="confirmationText">Thank you! Your table request has been validated. Reference Code: #BV-8910. Note: This is a client-side preview demonstration.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACT & HOURS SECTION ==================== -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">LOCATION & HOURS</span>
+                <h2 class="section-title">Visit Bella Vista</h2>
+                <p class="section-description">Located in the heart of downtown culinary district.</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <span class="icon">📍</span>
+                    <h3>Address</h3>
+                    <p>450 Gourmet Avenue, Suite 100<br>Culinary District, NY 10001</p>
+                </div>
+
+                <div class="contact-card">
+                    <span class="icon">⏰</span>
+                    <h3>Opening Hours</h3>
+                    <p><strong>Lunch:</strong> Mon-Sun: 12:00 PM - 03:30 PM<br><strong>Dinner:</strong> Mon-Sun: 06:30 PM - 11:00 PM</p>
+                </div>
+
+                <div class="contact-card">
+                    <span class="icon">📞</span>
+                    <h3>Direct Contact</h3>
+                    <p><strong>Phone:</strong> +1 (800) 555-BELLA<br><strong>Email:</strong> reservations@bellavista.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="#hero" class="logo">
+                    <span class="logo-icon">🍷</span>Bella <span>Vista</span>
+                </a>
+                <p>Fine dining, organic ingredients, and unforgettable culinary moments since 2011.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#specials">Chef Specials</a></li>
+                    <li><a href="#menu">Food Menu</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Guest Links</h4>
+                <ul>
+                    <li><a href="#reservation">Book Table</a></li>
+                    <li><a href="#gallery">Visual Gallery</a></li>
+                    <li><a href="#reviews">Guest Reviews</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Bella Vista Gourmet Bistro. Created for CyberSNova Internship.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

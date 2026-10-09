@@ -1,0 +1,582 @@
+/* ==========================================================================
+   Bella Vista Restaurant Management Stylesheet
+   Theme: Elegant Warm Culinary Palette (Charcoal #1c1917, Amber Gold #f59e0b)
+   ========================================================================== */
+
+:root {
+    --bg-dark: #1c1917;
+    --bg-card: #292524;
+    --bg-card-light: #3f3f46;
+    --amber-gold: #f59e0b;
+    --accent-gold: #d97706;
+    --text-cream: #fffbe6;
+    --text-muted: #a8a29e;
+    --border-color: rgba(245, 158, 11, 0.2);
+    --font-main: 'Plus Jakarta Sans', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-dark);
+    color: var(--text-cream);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ==================== BUTTONS & BADGES ==================== */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.6rem;
+    border-radius: 10px;
+    font-family: var(--font-main);
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-gold {
+    background: linear-gradient(135deg, var(--amber-gold) 0%, var(--accent-gold) 100%);
+    color: #1c1917;
+    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+}
+
+.btn-gold:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(245, 158, 11, 0.45);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--amber-gold);
+    border: 1px solid var(--amber-gold);
+}
+
+.btn-outline:hover {
+    background: rgba(245, 158, 11, 0.1);
+    transform: translateY(-2px);
+}
+
+.btn-full {
+    width: 100%;
+}
+
+.gold-text {
+    color: var(--amber-gold);
+}
+
+.section-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 3.5rem auto;
+}
+
+.section-badge {
+    display: inline-block;
+    padding: 0.35rem 0.9rem;
+    background: rgba(245, 158, 11, 0.1);
+    color: var(--amber-gold);
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    border: 1px solid var(--border-color);
+    margin-bottom: 0.8rem;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 0.8rem;
+    color: var(--text-cream);
+}
+
+.section-description {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+}
+
+/* ==================== NAVBAR ==================== */
+.navbar {
+    background: rgba(28, 25, 23, 0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.1rem 0;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--text-cream);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.logo span {
+    color: var(--amber-gold);
+}
+
+.logo-icon {
+    font-size: 1.4rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.6rem;
+}
+
+.nav-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.92rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--amber-gold);
+}
+
+.mobile-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.6rem;
+    color: var(--amber-gold);
+    cursor: pointer;
+}
+
+/* ==================== HERO SECTION ==================== */
+.hero-section {
+    padding: 8rem 0 6rem 0;
+    background: radial-gradient(circle at 50% 30%, rgba(245, 158, 11, 0.12) 0%, transparent 60%);
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-badge {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    background: rgba(245, 158, 11, 0.15);
+    color: var(--amber-gold);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    border: 1px solid var(--border-color);
+    margin-bottom: 1.2rem;
+}
+
+.hero-title {
+    font-size: 3.4rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1.2rem;
+}
+
+.hero-subtitle {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    margin-bottom: 2.2rem;
+}
+
+.hero-btns {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* ==================== ABOUT & SPECIALS ==================== */
+.about-section, .specials-section, .menu-section, .gallery-section, .reviews-section, .reservation-section, .contact-section {
+    padding: 6rem 0;
+    border-top: 1px solid var(--border-color);
+}
+
+.about-grid, .specials-grid, .reviews-grid, .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.about-card, .special-card, .review-card, .contact-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    padding: 2rem;
+    border-radius: 18px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.about-card:hover, .special-card:hover, .review-card:hover, .contact-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--amber-gold);
+}
+
+.card-icon, .icon {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.about-card h3, .contact-card h3 {
+    font-size: 1.3rem;
+    color: var(--amber-gold);
+    margin-bottom: 0.6rem;
+}
+
+.about-card p, .contact-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.dish-badge {
+    background: rgba(245, 158, 11, 0.15);
+    color: var(--amber-gold);
+    font-size: 0.72rem;
+    font-weight: 800;
+    padding: 0.25rem 0.6rem;
+    border-radius: 10px;
+    display: inline-block;
+    margin-bottom: 0.8rem;
+}
+
+.dish-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.8rem;
+}
+
+.dish-header h3 {
+    font-size: 1.25rem;
+    color: var(--text-cream);
+}
+
+.dish-price {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--amber-gold);
+}
+
+.dish-desc {
+    color: var(--text-muted);
+    font-size: 0.92rem;
+}
+
+/* ==================== FOOD MENU TABS ==================== */
+.menu-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 0.6rem;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+}
+
+.menu-tab-btn {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    color: var(--text-muted);
+    padding: 0.6rem 1.2rem;
+    border-radius: 10px;
+    font-family: var(--font-main);
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.menu-tab-btn.active, .menu-tab-btn:hover {
+    background: var(--amber-gold);
+    color: #1c1917;
+    font-weight: 700;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.menu-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    padding: 1.6rem;
+    border-radius: 16px;
+    transition: transform 0.3s ease;
+}
+
+.menu-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--amber-gold);
+}
+
+.menu-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.6rem;
+}
+
+.menu-card-top h4 {
+    font-size: 1.1rem;
+    color: var(--text-cream);
+}
+
+.menu-card-top .price {
+    font-weight: 800;
+    color: var(--amber-gold);
+    font-size: 1.05rem;
+}
+
+.menu-card p {
+    color: var(--text-muted);
+    font-size: 0.88rem;
+    margin-bottom: 0.8rem;
+}
+
+.category-tag {
+    font-size: 0.72rem;
+    color: var(--amber-gold);
+    background: rgba(245, 158, 11, 0.1);
+    padding: 0.2rem 0.5rem;
+    border-radius: 6px;
+    font-weight: 700;
+}
+
+/* ==================== GALLERY & REVIEWS ==================== */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+}
+
+.gallery-card {
+    height: 200px;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease;
+}
+
+.gallery-card:hover {
+    transform: scale(1.03);
+}
+
+.bg-1 { background: linear-gradient(135deg, #451a03, #9a3412); }
+.bg-2 { background: linear-gradient(135deg, #1e1b4b, #3730a3); }
+.bg-3 { background: linear-gradient(135deg, #064e3b, #047857); }
+.bg-4 { background: linear-gradient(135deg, #701a75, #a21caf); }
+
+.review-card .stars {
+    margin-bottom: 0.8rem;
+}
+
+.review-text {
+    font-style: italic;
+    color: var(--text-cream);
+    margin-bottom: 1.2rem;
+    font-size: 0.95rem;
+}
+
+.reviewer-info h4 {
+    font-size: 0.95rem;
+    color: var(--amber-gold);
+}
+
+.reviewer-info span {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+/* ==================== TABLE RESERVATION FORM ==================== */
+.reservation-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    padding: 2.5rem;
+    border-radius: 24px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+label {
+    display: block;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--text-cream);
+    margin-bottom: 0.4rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    background: var(--bg-dark);
+    border: 1.5px solid var(--border-color);
+    border-radius: 10px;
+    color: var(--text-cream);
+    font-family: var(--font-main);
+    font-size: 0.95rem;
+    outline: none;
+}
+
+input:focus, select:focus {
+    border-color: var(--amber-gold);
+    box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.15);
+}
+
+.error-msg {
+    display: none;
+    color: #ef4444;
+    font-size: 0.8rem;
+    margin-top: 0.3rem;
+}
+
+.error-msg.show {
+    display: block;
+}
+
+.confirmation-alert {
+    display: none;
+    background: rgba(16, 185, 129, 0.15);
+    border: 1px solid #10b981;
+    color: #6ee7b7;
+    padding: 1.2rem;
+    border-radius: 12px;
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.confirmation-alert h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+}
+
+/* ==================== FOOTER ==================== */
+.footer {
+    background: #110e0c;
+    border-top: 1px solid var(--border-color);
+    padding-top: 4rem;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.footer-brand p {
+    color: var(--text-muted);
+    margin-top: 0.8rem;
+    font-size: 0.9rem;
+    max-width: 320px;
+}
+
+.footer-col h4 {
+    color: var(--text-cream);
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-col a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.footer-col a:hover {
+    color: var(--amber-gold);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 1.2rem 0;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+/* Responsive Scaling */
+@media (max-width: 850px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background: var(--bg-dark);
+        padding: 1.5rem;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    }
+    .nav-links.show {
+        display: flex;
+    }
+    .mobile-toggle {
+        display: block;
+    }
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+}
