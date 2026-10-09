@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: bella-vista-hotel
+    env: static
+    buildCommand: echo "Static site build"
+    staticPublishPath: .
